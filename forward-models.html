@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Forward Models</title>
+</head>
+<body>
+    <h1>Forward Models Page</h1>
+    <div id="images-container"></div>
+
+    <script>
+        // This should match your main roiToImageMap object!
+        const roiToImageMap = {
+            18: [
+                '3D-plot-of-55E33_1-trisurf_reflectanceSHOE_simple.png',
+                '3D-plot-of-55E33_2-trisurf_reflectanceSHOE_simple.png',
+                '3D-plot-of-55E33_3-trisurf_reflectanceSHOE_simple.png',
+                '3D-plot-of-55E33_4-trisurf_reflectanceSHOE_simple.png',
+                '3D-plot-of-55E33_5-trisurf_reflectanceSHOE_simple.png',
+            ],
+            // Add other ROIs here as needed
+        };
+
+        // Read ROI number from URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const roiParam = urlParams.get('roi');
+        const roiNumber = Number(roiParam);
+
+        const container = document.getElementById('images-container');
+
+        if (!roiParam || !roiToImageMap[roiNumber]) {
+            container.innerHTML = '<em>No images available for this ROI.</em>';
+        } else {
+            roiToImageMap[roiNumber].forEach(filename => {
+                const img = document.createElement('img');
+                img.src = `images/${filename}`;
+                img.alt = `Forward model for ROI ${roiNumber}`;
+                img.style.maxWidth = '100%';
+                img.style.border = '1px solid #ccc';
+                img.style.margin = '10px 0';
+                container.appendChild(img);
+            });
+        }
+    </script>
+</body>
+</html>
+
