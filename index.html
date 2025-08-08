@@ -70,6 +70,22 @@
                 text-shadow: 1px 1px 2px black;
                 white-space: nowrap;
             }
+
+            #roi-note {
+            position: fixed;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 6px 12px;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #333;
+            border-radius: 4px;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
         </style>
 
         <title></title>
@@ -79,6 +95,8 @@
             <div id="map"></div>
         <div class="map-label left-label"><em>Leading Hemisphere</em></div>
         <div class="map-label right-label"><em>Trailing Hemisphere</em></div>
+        
+        <div id="roi-note">*ROI = Region of Interest, arbitrarily defined perimeter</div>
 
             
         </div>
@@ -237,9 +255,41 @@
                     '3D-plot-of-55E33_3-trisurf_reflectanceSHOE_simple.png',
                     '3D-plot-of-55E33_4-trisurf_reflectanceSHOE_simple.png',
                     '3D-plot-of-55E33_5-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-55E33_6-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_2-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_1-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_1-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_2-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_3-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_4-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_5-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_6-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_3-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_4-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_5-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_6-trisurf_reflectanceSHOE_simple.png'
                 ],
-                17: ['3D-plot-of-55E33_19-trisurf_reflectanceSHOE_simple.png']
-                
+                17: ['3D-plot-of-55E33_19-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-55E33_18-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-12E07_28-trisurf_reflectanceSHOE_simple.png', 
+                    '3D-plot-of-12E07_26-trisurf_reflectanceSHOE_simple.png', 
+                    '3D-plot-of-55E33_27-trisurf_reflectanceSHOE_simple.png',                 
+                ],
+                15: ['3D-plot-of-12E07_7-trisurf_reflectanceSHOE_simple.png',
+
+                ],
+                13: ['3D-plot-of-12E07_18-trisurf_reflectanceSHOE_simple.png',
+
+                ],
+                16: ['3D-plot-of-12E07_27-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-15E19_7-trisurf_reflectanceSHOE_simple.png',
+                    '3D-plot-of-25E19_7-trisurf_reflectanceSHOE_simple.png',
+
+                ],
+                14: ['3D-plot-of-25E19_8-trisurf_reflectanceSHOE_simple.png',
+
+                ],
+
             // all ROI-to-filename mappings
             };
 
